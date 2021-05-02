@@ -2,26 +2,25 @@ class main{
     constructor(previous, current){
         this.previous = previous;
         this.current = current;
-        this.clear();
+        this.clear()
     }
 
     clear(){
-        this.previous = "";
-        this.current = "";
+        this.previous = '';
+        this.current = '';
         this.operation = undefined;
     }
 
     delete(){}
 
     appendnumber(number){
+        console.log(number)
         if (number === '.' && this.current.includes('.')) return;
         this.current = this.current.toString() + number.toString();
+        console.log(this.current)
     }
 
-    chooseoperation(operation){
-
-
-    }
+    chooseoperation(operation){}
 
     main_do(){}
 
@@ -40,8 +39,6 @@ const ac_btn = document.querySelector('[all-clear]');
 const prev_data = document.querySelector('[perv_data]');
 const current_data = document.querySelector('[cur_data]');
 
-console.log(prev_data.innerText);
-console.log(current_data.innerText);
 
 
 const calculator = new main(prev_data, current_data);
