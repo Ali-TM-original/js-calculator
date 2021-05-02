@@ -1,4 +1,3 @@
-
 class main{
     constructor(previous, current){
         this.previous = previous;
@@ -8,7 +7,7 @@ class main{
 
     clear(){
         this.previous = "";
-        this.curent = "";
+        this.current = "";
         this.operation = undefined;
     }
 
@@ -16,7 +15,7 @@ class main{
 
     appendnumber(number){
         if (number === '.' && this.current.includes('.')) return;
-        this.currentOperand = this.current.toString() + number.toString();
+        this.current = this.current.toString() + number.toString();
     }
 
     chooseoperation(operation){
